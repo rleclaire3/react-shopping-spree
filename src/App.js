@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
 
 function App() {
+  const cart = {
+    items: [
+      'Camera',
+      'Shoes',
+      'Handbag',
+      'Smartphone',
+      'Sweater',
+      'Watch',
+      'Headphones',
+      'Book',
+      'Ring',
+      'Jalen'
+    ],
+    addedItems: [
+
+    ]
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <h1>Assignment 01</h1>
       </header>
-    </div>
+      <main>
+        <h2>Shopping List</h2>
+        <form action="">
+          <label htmlFor="cart">Select your items</label> <br />
+          <select name="cart" id="">
+            {cart.items.map((item, i) => <option key={i}>{item}</option> )}
+          </select>
+          <button type="submit">Add item</button>
+        </form>
+      </main>
+      <footer>
+
+      </footer>
+    </>
   );
 }
 
