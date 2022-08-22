@@ -1,5 +1,5 @@
-import "./style.css";
-
+import { useRef, useState } from "react";
+import "./style.css"
 
 function App() {
   const cart = {
@@ -18,9 +18,17 @@ function App() {
       'Danial',
       'Techin',
     ],
-    addedItems: [
+  }
 
-    ]
+  // let selection = undefined;
+  
+  const [addedItems, setUserCart] = useState([]);
+  const selectRef = useRef();
+
+  function addItem(e){
+    e.preventDefault();
+    setUserCart([...addedItems, selectRef.current.value])
+    console.log(selectRef)
   }
 
   return (
