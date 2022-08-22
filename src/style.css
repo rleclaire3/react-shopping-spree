@@ -42,7 +42,10 @@ form {
 main ul{
     text-align: center;
     margin-left: -38px;
-    
+}
+
+li{
+  text-align:left;
 }
 
 
