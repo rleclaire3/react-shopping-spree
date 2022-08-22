@@ -13,13 +13,15 @@ function App() {
       'Headphones',
       'Book',
       'Ring',
-      'Jalen'
+      'Jalen',
+      'Reilly',
+      'Danial',
+      'Techin',
     ],
     addedItems: [
 
     ]
   }
-
 
   return (
     <>
@@ -28,10 +30,14 @@ function App() {
       </header>
       <main>
         <h2>Shopping List</h2>
-        <form action="">
+        <ul>{addedItems.length <= 0 ? "Add some items" : "You have " + addedItems.length + " items in your shopping list"}</ul>
+        <div className="cart-items">
+          <ul>{addedItems.length > 0 ? addedItems.map((item, i)=><li key={i}>{item}</li>) : ""}</ul>
+        </div>
+        <form onSubmit={addItem}>
           <label htmlFor="cart">Select your items</label> <br />
-          <select name="cart" id="">
-            {cart.items.map((item, i) => <option key={i}>{item}</option> )}
+          <select name="cart" id="cart" ref={selectRef}>
+            {cart.items.map((item, i) => <option key={i} value={item}>{item}</option> )}
           </select>
           <button type="submit">Add item</button>
         </form>
