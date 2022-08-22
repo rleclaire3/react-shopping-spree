@@ -1,14 +1,15 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    
   }
   
+  html {
+    background-image: url(./images/duckling.png);
+  }
   body {
     min-height: 125vh;
     min-width: 400px;
-    
-    background: radial-gradient(#fffffffe, #4349ffb3);
+    background: radial-gradient(#fffffffe, rgb(255, 238, 169));
     position: relative;
     max-width: 480px;
     min-height: 500px;
@@ -33,12 +34,17 @@
   }
 
 
-  
+form {
+    text-align: center;
+    padding: 1rem;
+}
  
+main ul{
+    text-align: center;
+    margin-left: -38px;
+    
+}
 
-
-  
-  
 
 
 
