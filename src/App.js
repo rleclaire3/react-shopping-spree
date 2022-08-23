@@ -1,6 +1,8 @@
+// calling a useState and useRef hook
 import { useRef, useState } from "react";
 import "./style.css"
 
+// creating the main component for the application
 function App() {
   const cart = {
     items: [
@@ -26,6 +28,7 @@ function App() {
   const selectRef = useRef();
 
   function addItem(e){
+    // using preventDefault() to prevent the form submission from refreshing the page
     e.preventDefault();
     setUserCart([...addedItems, selectRef.current.value])
     console.log(selectRef)
@@ -51,7 +54,7 @@ function App() {
         </form>
       </main>
       <footer>
-
+        <p>&copy; 2022 Riley, Daniel and Jalen</p>
       </footer>
     </>
   );
