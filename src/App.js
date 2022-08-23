@@ -41,12 +41,12 @@ function App() {
       </header>
       <main>
         <h2>Shopping List</h2>
-        <ul>{addedItems.length <= 0 ? "Add some items" : "You have " + addedItems.length + " items in your shopping list"}</ul>
+        <ul>{addedItems.length <= 0 ? "Add Some Items" : "You have " + addedItems.length + " item(s) in your shopping list"}</ul>
         <div className="cart-items">
           <ul>{addedItems.length > 0 ? addedItems.map((item, i)=><li key={i}>{item}</li>) : ""}</ul>
         </div>
         <form onSubmit={addItem}>
-          <label htmlFor="cart">Select your items</label> <br />
+          <label htmlFor="cart">Please Select Your Items</label> <br />
           <select name="cart" id="cart" ref={selectRef}>
             {cart.items.map((item, i) => <option key={i} value={item}>{item}</option> )}
           </select>

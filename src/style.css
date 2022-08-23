@@ -46,27 +46,14 @@ main ul{
 
 li{
   text-align:left;
+  padding: 0.5rem;
+  font-weight: bold;
 }
 
+footer {
+  margin-top: 30rem;
+}
 
-
-
-
-  
-  
-  
-  
-  
-  
- 
-  
-  
- 
-
- 
- 
-  
-  
-  
-  
-  
+label {
+  font-weight: bold;
+}
